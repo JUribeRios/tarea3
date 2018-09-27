@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <iostream>
+
+void ordenaArreglo(int *array, int size);
+int arreglo[]={4,8,6,7,9,1};
+int *ptr=&arreglo[0];
+
+
+int main() 
+{
+
+ordenaArreglo(ptr,6);
+
+return 0;
+}
+
+void ordenaArreglo(int *array, int size)
+{ 
+    
+int i, j, temp;
+
+for(j=0; j<size-1; ++j)
+{
+for(i=j+1; i<size; ++i)
+{
+if(*(ptr+i)<*(ptr+j)) 
+{ 
+temp=*(ptr+j); 
+*(ptr+j)= *(ptr+i); 
+*(ptr+i)= temp; 
+}   
+}
+}
+for(i=0;i<size;++i)
+
+ std::cout<<" arreglo "<< *(ptr++) <<std::endl;   
+
+}
