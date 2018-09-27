@@ -1,0 +1,19 @@
+bool buscastring(char *bigarray, char * smallarray);
+
+char *cadena1="qiemdnsjdlnsesorpek";
+char *cadena2="mkefu";
+
+int main() 
+{
+
+buscastring(cadena1,cadena2);
+
+return 0;
+}
+
+bool buscastring(char *bigarray, char *smallarray)
+{ 
+    
+  
+
+}
