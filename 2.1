@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <iostream>
+#include <string.h>
+
+bool buscastring(char *bigarray, char * smallarray);
+
+char *cadena1="hola mundo";
+char *cadena2="ola";
+
+int main() 
+{
+
+if(buscastring(cadena1,cadena2))
+std::cout<<"La cadena 2 esta en la 1"<<std::endl;
+else
+std::cout<<"La cadena 2 no esta en la 1"<<std::endl;
+
+return 0;
+}
+
+bool buscastring(char *bigarray, char *smallarray)
+{ 
+ int longitud1 = strlen(cadena1);
+ int longitud2 = strlen(cadena2);
+ int i,cont=0;
+ 
+ for(i=0; i<longitud1; ++i)
+ {
+     if(cadena1[i]==cadena2[cont])
+     {
+         cont++;
+         
+         if(cont==longitud2)
+         return true;
+         
+         else
+         {
+         }
+         
+     }
+     else 
+     cont=0;
+ }
+ 
+  return false;
+}
