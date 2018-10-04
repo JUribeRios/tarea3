@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <iostream>
+#include <math.h>
+#include <cstring>
+using namespace std;
+
+void producto();
+void convertir(int r, int ang, int a, int jb);
+bool anagrama(char *cadena1,char *cadena2);
+
+char *cad1="amor";
+char *cad2="roma";
+
+int main()
+{
+    
+producto();
+convertir(8,30,2,3);
+if(anagrama(cad1,cad2))
+cout<<"las cadenas son anagramas "<<endl;
+else
+cout<<"las cadenas no son anagramas "<<endl;
+
+    return 0;
+}
+
+void producto()
+{
+int a[]={4,9,6};
+int b[]={2,5,1};
+int mul=0;
+int i,j,k=0;
+for(int i=0;i<3;++i)
+{
+mul+=a[i]*b[i];
+}
+cout<<"el producto punto es: "<<mul<<endl;
+
+i=(a[1]*b[2])-(a[2]*b[1]);
+j=-((a[0]*b[2])-(a[2]*b[0]));
+k=(a[0]*b[1])-(a[1]*b[0]);
+cout<<"el producto cruz es "<<endl;
+cout<<"i: "<<i<<endl;
+cout<<"j: "<<j<<endl;
+cout<<"k: "<<k<<endl;
+}
+
+void convertir(int r, int ang,int a, int jb)
+{
+float magnitud,angulo=0;
+float real,imaginaria=0;
+
+ magnitud=sqrt((pow(a,2))+(pow(jb,2)));
+ angulo=atan((jb/a));
+ cout<<"r: "<<magnitud<<"  angulo: "<<angulo<<endl;
+ 
+ real=r*cos(ang);
+ imaginaria=r*sin(ang);
+ cout<<"la parte real es: "<<real<<"  la parte imaginaria es: "<<imaginaria<<endl;
+}
+
+bool anagrama(char *cadena1,char *cadena2)
+{
+int tam1=strlen(cad1);
+int tam2=strlen(cad2);
+ int i,j=0;   
+    if(tam1==tam2)
+    {
+      for(i=0;i<tam1;++i)
+      {
+         if(cad1[i]==cad2[j])
+         {
+             j++;
+             if(j==tam1)
+               return true;  
+             else
+             {
+             }
+         }
+         else
+         j=0;
+         
+      }
+      
+    }
+    else
+    return false;
+}
